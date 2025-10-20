@@ -7,13 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A059F45D2EA6994C0010A29B /* .gitignore in Sources */ = {isa = PBXBuildFile; fileRef = A059F45C2EA699480010A29B /* .gitignore */; };
 		E5BC95372E7D20C800F913F7 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = E5BC95362E7D20C800F913F7 /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		6E4A0A84588A43B861AA4B13 /* SampleCode.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = SampleCode.xcconfig; path = ../Configuration/SampleCode.xcconfig; sourceTree = "<group>"; };
-		A059F45C2EA699480010A29B /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = .gitignore; sourceTree = "<group>"; };
 		E16EAEECEF028AEBB0E1E37E /* LICENSE.txt */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
 		E54AA9F62E566DED00EFC996 /* FoundationModelsCodeAlong.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoundationModelsCodeAlong.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5BC95362E7D20C800F913F7 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = SOURCE_ROOT; };
@@ -58,7 +56,6 @@
 		E54AA9ED2E566DED00EFC996 = {
 			isa = PBXGroup;
 			children = (
-				A059F45C2EA699480010A29B /* .gitignore */,
 				E5BC95362E7D20C800F913F7 /* README.md */,
 				E54AA9F82E566DED00EFC996 /* FoundationModelsCodeAlong */,
 				E54AA9F72E566DED00EFC996 /* Products */,
@@ -148,7 +145,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A059F45D2EA6994C0010A29B /* .gitignore in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
