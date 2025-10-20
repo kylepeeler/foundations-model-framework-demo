@@ -24,6 +24,7 @@ final class ItineraryGenerator {
         self.landmark = landmark
         let instructions = """
             Your job is to create an itinerary for the user.
+            Each day needs an activity, hotel and restaurant.
             """
         self.session = LanguageModelSession(instructions: instructions)
         // MARK: - [CODE-ALONG] Chapter 5.3.1: Update the instructions to use the Tool
