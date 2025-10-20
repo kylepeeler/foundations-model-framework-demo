@@ -15,38 +15,30 @@ final class ItineraryGenerator {
     var error: Error?
     let landmark: Landmark
     
-    // MARK: - [CODE-ALONG] Chapter 1.5.1: Add a session property
     private var session: LanguageModelSession
     
-    // MARK: - [CODE-ALONG] Chapter 2.3.1: Update to Generable
     // MARK: - [CODE-ALONG] Chapter 4.1.1: Change the property to hold a partially generated Itinerary
-    private(set) var itineraryContent: String?
+    private(set) var itinerary: Itinerary?
 
     init(landmark: Landmark) {
         self.landmark = landmark
-        // MARK: - [CODE-ALONG] Chapter 1.5.2: Initialize LanguageModelSession
         let instructions = """
-            Your job is to create an itinerary for the user. Each day needs an activity, hotel and restaurant.
-            
-            Always inclue a title, a short description, and a day-by-day plan.
+            Your job is to create an itinerary for the user.
             """
         self.session = LanguageModelSession(instructions: instructions)
-        // MARK: - [CODE-ALONG] Chapter 2.3.3: Update instructions to remove structural guidance
         // MARK: - [CODE-ALONG] Chapter 5.3.1: Update the instructions to use the Tool
         // MARK: - [CODE-ALONG] Chapter 5.3.2: Update the LanguageModelSession with the tool
                
     }
 
     func generateItinerary(dayCount: Int = 3) async {
-        // MARK: - [CODE-ALONG] Chapter 1.5.3: Add itinerary generator using Foundation Models
         do {
             let prompt = "Generate a \(dayCount)-day itinerary to \(landmark.name)."
-            let response = try await session.respond(to: prompt)
-            self.itineraryContent = response.content
+            let response = try await session.respond(to: prompt, generating: Itinerary.self)
+            self.itinerary = response.content
         } catch {
             self.error = error
         }
-        // MARK: - [CODE-ALONG] Chapter 2.3.2: Update to use Generables
         // MARK: - [CODE-ALONG] Chapter 3.3: Update to use one-shot prompting
         // MARK: - [CODE-ALONG] Chapter 4.1.2: Update to use streaming API
         // MARK: - [CODE-ALONG] Chapter 5.3.3: Update `session.streamResponse` to include greedy sampling
